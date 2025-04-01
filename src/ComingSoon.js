@@ -1,4 +1,3 @@
-// src/ComingSoon.js (now BillsPage.js)
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
