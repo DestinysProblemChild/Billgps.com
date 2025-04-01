@@ -1,14 +1,13 @@
-// src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import BillsPage from './ComingSoon'; // Import the updated BillsPage (which used to be ComingSoon)
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import BillsPage from './BillsPage';  // Correct import for BillsPage
 
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/" component={BillsPage} /> {/* This will now render the bills tracking page */}
-      </Switch>
+      <Routes>
+        <Route path="/" element={<BillsPage />} />  {/* Correct way to render BillsPage */}
+      </Routes>
     </Router>
   );
 }
