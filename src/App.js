@@ -1,12 +1,15 @@
+// src/App.js
 import React from 'react';
-import './App.css';
-import ComingSoon from './ComingSoon';  // Import the ComingSoon component
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import BillsPage from './ComingSoon'; // Import the updated BillsPage (which used to be ComingSoon)
 
 function App() {
   return (
-    <div className="App">
-      <ComingSoon />  {/* Use the ComingSoon component */}
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={BillsPage} /> {/* This will now render the bills tracking page */}
+      </Switch>
+    </Router>
   );
 }
 
